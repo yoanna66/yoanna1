@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="yoanna1 繁體中文 AI 聊天網站。">
+    <title>yoanna1｜AI 聊天</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳至主要內容</a>
+    <header class="site-header">
+      <a class="brand" href="./">yoanna1</a>
+      <nav aria-label="主要導覽"><a href="#about">關於網站</a><a href="#chat">AI 聊天</a></nav>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="welcome">
+        <p class="eyebrow">HELLO, WORLD</p>
+        <h1 id="welcome">每個想法，<br>都有一個開始。</h1>
+        <p class="intro">歡迎來到 yoanna1。這是我的第一個網站，也是記錄學習、分享創意與探索新可能的起點。</p>
+        <a class="button" href="#chat">開始聊天 <span aria-hidden="true">↗</span></a>
+      </section>
+      <section id="about" class="panel" aria-labelledby="about-title">
+        <p class="eyebrow">ABOUT</p>
+        <h2 id="about-title">從簡單出發，慢慢累積。</h2>
+        <p>使用 OpenAI 提供的 AI 助理，以繁體中文交流想法。AI 可能出錯，重要資訊請自行查證；請勿輸入密碼或敏感個資。</p>
+      </section>
+      <section id="chat" class="next" aria-labelledby="chat-title">
+        <h2 id="chat-title">與 AI 聊聊</h2>
+        <p>每則最多 2000 字；對話僅保留於目前頁面，重新整理即可清除。訊息會送往 OpenAI 處理。</p>
+        <div id="messages" class="messages" role="log" aria-label="聊天紀錄" aria-live="polite"></div>
+        <form id="chat-form">
+          <label for="message">你的訊息</label>
+          <textarea id="message" name="message" rows="4" maxlength="2000" required placeholder="想聊些什麼？"></textarea>
+          <button class="button" id="send" type="submit">送出訊息</button>
+          <button id="clear" type="button">清除對話</button>
+        </form>
+        <p id="status" role="status" aria-live="polite"></p>
+        <noscript>請啟用 JavaScript 以使用聊天功能。</noscript>
+      </section>
+    </main>
+    <footer>yoanna1 · 用好奇心開始，用每一步累積。</footer>
+    <script src="./chat.js" defer></script>
+  </body>
+</html>
